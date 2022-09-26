@@ -27,3 +27,30 @@ const enum Size {
 }
 
 let mySize: Size = Size.Medium
+
+// Functions
+function calculateTax(income: number, taxYear: number): number {
+    if (taxYear < 2022)
+        return income * 1.2;
+    return income * 1.3
+}
+
+calculateTax(10_000, 2022)
+
+// Functions with optional parameters
+function calculateTax2(income: number, taxYear?: number): number {
+    if ((taxYear || 2022) < 2022)
+        return income * 1.2;
+    return income * 1.3
+}
+
+calculateTax2(10_000, 2022)
+
+// Functions with optional parameters
+function calculateTax3(income: number, taxYear=2022): number {
+    if (taxYear < 2022)
+        return income * 1.2;
+    return income * 1.3
+}
+
+calculateTax3(10_000, 2023)
