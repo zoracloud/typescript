@@ -46,7 +46,7 @@ function calculateTax2(income: number, taxYear?: number): number {
 
 calculateTax2(10_000, 2022)
 
-// Functions with optional parameters
+// Functions with optional parameters (default value)
 function calculateTax3(income: number, taxYear=2022): number {
     if (taxYear < 2022)
         return income * 1.2;
@@ -54,3 +54,29 @@ function calculateTax3(income: number, taxYear=2022): number {
 }
 
 calculateTax3(10_000, 2023)
+
+// Objects
+let employee:{
+    id: number,
+    name: string
+} = {id: 1, name:""}
+
+// Making some property read only
+// Objects
+let employee2:{
+    readonly id: number,
+    name: string
+} = {id: 1, name:""}
+
+// Method in the object
+let employee3:{
+    readonly id: number,
+    name: string
+    retire: (date: Date) => void
+} = {
+    id: 1, 
+    name:"",
+    retire: (date: Date) => {
+        console.log(date)
+    }
+}
