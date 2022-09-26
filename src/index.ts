@@ -14,3 +14,16 @@ function render(document:any){
 // Arrays
 let numbers: number[] = [1, 3, 4, 5]
 // numbers.forEach(n => n.)
+
+//Tuples (fixed lenth arrays) pair of values
+
+let user: [number, string] = [1, "allan"]
+
+//Enums (list of related constants)
+const enum Size {
+    Small = 1,
+    Medium,
+    Large
+}
+
+let mySize: Size = Size.Medium
